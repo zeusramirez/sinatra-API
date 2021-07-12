@@ -6,6 +6,7 @@ gem 'sinatra-cross_origin'
 gem 'activerecord', '~> 5.2'
 gem 'sinatra-activerecord'
 gem 'rake'
+gem 'faker'
 
 gem 'require_all'
 gem 'sqlite3'

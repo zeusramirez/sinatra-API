@@ -22,12 +22,14 @@ ActiveRecord::Schema.define(version: 2021_07_12_184933) do
     t.integer "user_id"
     t.integer "menu_id"
     t.string "status"
+    t.integer "quantity"
   end
 
   create_table "restaurants", force: :cascade do |t|
     t.string "name"
     t.string "address"
     t.string "phone"
+    t.string "image"
   end
 
   create_table "users", force: :cascade do |t|

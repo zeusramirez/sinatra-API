@@ -4,6 +4,7 @@ class CreateOrders < ActiveRecord::Migration[5.2]
       t.integer :user_id
       t.integer :menu_id
       t.string :status
+      t.integer :quantity
       
     end
   end

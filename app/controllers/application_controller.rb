@@ -56,4 +56,16 @@ class ApplicationController < Sinatra::Base
     delete_order.destroy(params['order_id'])
     "Order Deleted"
   end
+
+  post '/user/login' do 
+    user = User.find_by(name: params['name'])
+    error = {msg: "Error: No user matching that criteria found."}
+    user ? user.to_json : error.to_json
+  end
+
+  post '/user/signup' do 
+    user = User.create(name: params['name'], delivery_instructions: params['delivery_instructions'], phone: params['phone'], address: params['address'])
+    error = {msg: "Could not create user. Please try again"}
+    user ? user.to_json : error.to_json
+  end
 end
